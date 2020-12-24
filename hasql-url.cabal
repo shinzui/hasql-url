@@ -1,8 +1,19 @@
 cabal-version:   2.4
 name:            hasql-url
 version:         0.1.0.0
-synopsis:        See README for more info
-description:     See README for more info
+synopsis:
+  Parse PostgreSQL connection URI into Hasql.Connection Settings
+
+description:
+  The 'Hasql.URL' module in this package exports
+  a helper function'parseDatabaseUrl' to
+  construct 'Settings' from URI (or string).
+  .
+  @
+  >>> parseDatabaseUrl "postgres://username:password@localhost:5433/database"
+  Just "host=localhost port=5433 user=username password=password dbname=database"
+  @
+
 homepage:        https://github.com/shinzui/hasql-url
 bug-reports:     https://github.com/shinzui/hasql-url/issues
 license:         MIT
@@ -23,7 +34,7 @@ source-repository head
   location: https://github.com/shinzui/hasql-url.git
 
 common common-options
-  build-depends:    base >=4.13.0.0
+  build-depends:    base >=4.13 && <4.15
   ghc-options:
     -Wall -Wcompat -Widentities -Wincomplete-uni-patterns
     -Wincomplete-record-updates
