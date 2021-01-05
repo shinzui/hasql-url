@@ -34,11 +34,11 @@ data ConnectionInfo = ConnectionInfo
 defaultConnectionInfo :: ConnectionInfo
 defaultConnectionInfo = ConnectionInfo 5432 "postgres" "" "" ""
 
--- | Parse a string postgresql url into `Settings`
+-- | Parse a string postgresql url into `Hasql.Connection.Settings`
 --
 -- @
--- parseDatabaseUrl \"postgres://username:password@domain.com:1234/database\" ==
--- Just $ settings \"domain.com\" (fromInteger 1234) \"username\" \"password\" \"database\"
+-- parseDatabaseUrl \"postgres://username:password@domain.com:5433/database\" ==
+-- Just $ settings \"domain.com\" (fromInteger 5433) \"username\" \"password\" \"database\"
 -- @
 parseDatabaseUrl :: String -> Maybe Settings
 parseDatabaseUrl databaseUrl = parseURI databaseUrl >>= uriToSettings

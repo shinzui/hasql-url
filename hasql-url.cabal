@@ -6,8 +6,8 @@ synopsis:
 
 description:
   The 'Hasql.URL' module in this package exports
-  a helper function'parseDatabaseUrl' to
-  construct 'Settings' from URI (or string).
+  a helper function 'parseDatabaseUrl' to
+  construct 'Settings' from a URI (or string).
   .
   @
   >>> parseDatabaseUrl "postgres://username:password@localhost:5433/database"

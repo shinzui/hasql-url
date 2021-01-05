@@ -10,8 +10,8 @@ main = defaultMain caseProps
 
 cases :: [(String, Maybe Settings)]
 cases =
-  [ ("postgres://username:password@domain.com:1234/database", Just $ settings "domain.com" 1234 "username" "password" "database"),
-    ("postgresql://username:password@domain.com:1234/database", Just $ settings "domain.com" 1234 "username" "password" "database"),
+  [ ("postgres://username:password@domain.com:5433/database", Just $ settings "domain.com" 5433 "username" "password" "database"),
+    ("postgresql://username:password@domain.com:5433/database", Just $ settings "domain.com" 5433 "username" "password" "database"),
     ("postgres://localhost:5432/database", Just $ settings "localhost" 5432 "postgres" "" "database"),
     ("postgres://username@localhost/database", Just $ settings "localhost" 5432 "username" "" "database"),
     ("postgres://localhost/database", Just $ settings "localhost" 5432 "postgres" "" "database"),
