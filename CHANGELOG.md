@@ -3,6 +3,10 @@
 `hasql-url` uses [PVP Versioning][1].
 The changelog is available [on GitHub][2].
 
+## 0.3.0.0
+
+- Drop GHC 8.10 support
+
 ## 0.1.0.0
 
 - Initial release
