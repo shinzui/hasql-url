@@ -27,14 +27,14 @@ extra-doc-files:
   CHANGELOG.md
   README.md
 
-tested-with:     GHC ==8.10.2
+tested-with:     GHC ==9.4
 
 source-repository head
   type:     git
   location: https://github.com/shinzui/hasql-url.git
 
 common common-options
-  build-depends:    base >=4.14 && <5
+  build-depends:    base >=4.17 && <5
   ghc-options:
     -Wall -Wcompat -Widentities -Wincomplete-uni-patterns
     -Wincomplete-record-updates
@@ -56,8 +56,8 @@ common common-options
 library
   import:          common-options
   build-depends:
-    , bytestring   >=0.10 && < 0.12
-    , hasql        >=1.5  && < 2
+    , bytestring   >=0.10   && <0.12
+    , hasql        >=1.5    && <2
     , network-uri  ^>=2.6.3
     , split        ^>=0.2.3
 
@@ -70,7 +70,7 @@ test-suite hasql-url-test
   hs-source-dirs: test
   main-is:        Spec.hs
   build-depends:
-    , hasql             
+    , hasql
     , hasql-url
     , tasty             ^>=1.4
     , tasty-quickcheck  ^>=0.10

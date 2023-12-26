@@ -14,10 +14,9 @@ jobs:
     continue-on-error: true
     strategy:
       matrix:
-        cabal: ["3.2"]
+        cabal: ["3.8"]
         ghc:
-          - "8.10.7"
-          - "9.4.4"
+          - "9.4.6"
 
     steps:
     - uses: actions/checkout@v3
